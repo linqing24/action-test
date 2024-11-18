@@ -1,21 +1,16 @@
-name-template: 'release-v$NEXT_PATCH_VERSION'
-tag-template: 'v$NEXT_PATCH_VERSION 版本发布'
 categories:
-  - title: 'Features'
-    labels:
-      - 'feature'
-      - 'feat'
-  - title: 'Bug Fixes'
-    labels:
-      - 'fix'
-      - 'bugfix'
-      - 'bug'
-  - title: 'Maintenance'
-    labels:
-      - 'chore'
-      - 'documentation'
-change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
-template: |
-  # Changes
+  - title: "🚀 Features"
+    labels: [feature]
+  - title: "🐛 Bug Fixes"
+    labels: [bug]
 
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+
+template: |
+  # 发布日志
+
+  ## 变更
   $CHANGES
+
+  ## 提交者
+  $CONTRIBUTORS
