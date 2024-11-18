@@ -10,7 +10,5 @@ jobs:
     steps:
       - uses: release-drafter/release-drafter@v6
         name: Draft
-        with:
-          configuration: .github/release-drafter.yml
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
