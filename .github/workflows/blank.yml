@@ -1,25 +1,15 @@
-name: "tagged-release"
+name: Release Drafter
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - master
 
 jobs:
-  tagged-release:
-    name: "Tagged Release"
-    runs-on: "ubuntu-latest"
-
+  update_release_draft:
+    runs-on: ubuntu-latest
     steps:
-      - name: "Build & test"
-        run: |
-          echo "done!"
-
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.ACCESS_TOKEN }}"
-          prerelease: false
-          files: |
-            dist/main.js
-            dist/manifest.json
-            dist/styles.css
+      - uses: release-drafter/release-drafter@v6
+        name: Draft
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
