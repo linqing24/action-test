@@ -1,9 +1,9 @@
-name: Release Drafter
+name: "tagged-release"
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "v*"
 
 jobs:
   update_release_draft:
