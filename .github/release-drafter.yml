@@ -5,11 +5,6 @@ categories:
     labels: [bug]
 
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
-include-paths: |
-	manifest.json
-	main.js
-	style.css
-
 template: |
   # 发布日志
 
