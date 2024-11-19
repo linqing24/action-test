@@ -18,4 +18,4 @@ jobs:
           files: |
             manifest.json
             main.js
-            style.css
+            styles.css
