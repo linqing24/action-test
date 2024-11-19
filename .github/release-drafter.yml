@@ -5,7 +5,7 @@ categories:
     labels: [bug]
 
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
-files: |
+include-paths: |
 	manifest.json
 	main.js
 	style.css
